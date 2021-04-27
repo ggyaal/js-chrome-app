@@ -2,12 +2,14 @@
 @import "clock.css";
 @import "greetings.css";
 @import "todo.css";
-@import "weather.css";
+@import "upside.css";
 @import "bg.css";
 @import "another.css";
 
 :root {
   --white: #ecf0f1;
+  --gray: #7f8c8d;
+  --black: #2f3640;
 }
 
 body {

@@ -12,7 +12,7 @@ function getWeater(lat, lng) {
     .then(function (json) {
       const temp = json.main.temp;
       const city = json.name;
-      weather.innerText = `${temp} / ${city}`;
+      weather.innerText = `${temp}℃ @ ${city}`;
       weather.classList.add("show-up");
     });
 }

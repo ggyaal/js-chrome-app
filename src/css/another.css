@@ -8,18 +8,30 @@
 
 form {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
 input {
+  color: var(--white);
   border: none;
+  border-bottom: 2px solid var(--gray);
+  background: none;
   outline: none;
-  width: 50%;
+  width: 30%;
   height: 50px;
   padding: 20px;
-  border-radius: 30px;
-  font-size: 30px;
+  font-size: 1.6em;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-bottom: 2px solid var(--white);
+  transform: translateY(-20px) scale(1.02);
+}
+
+input:focus::placeholder {
+  color: var(--white);
 }
 
 .btn {
@@ -30,7 +42,6 @@ input {
   color: #7f8c8d;
 }
 
-.form,
 .greetings {
   display: none;
 }
@@ -47,4 +58,12 @@ input {
 .show-flex {
   display: flex;
   animation: fadeInUp 1s ease-in-out;
+}
+
+.dark {
+  color: var(--white);
+}
+
+.white {
+  color: var(--black);
 }

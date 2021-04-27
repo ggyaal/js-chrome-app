@@ -14,6 +14,12 @@ const GREETINGS = [
   "You can do it,",
 ];
 
+function deleteName() {
+  if (confirm("Do you want remove name?\nAll toDo lists will be lost")) {
+    localStorage.clear();
+  }
+}
+
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
 }
@@ -38,7 +44,14 @@ function randomGreetings() {
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText = `${randomGreetings()} ${text}`;
+  document.querySelector(".js-toDoForm").classList.add("show-flex");
+  const span = document.createElement("span");
+  const btn = document.createElement("button");
+  span.innerText = `${randomGreetings()} ${text}`;
+  btn.innerText = "delete name";
+  btn.addEventListener("click", deleteName);
+  greeting.appendChild(span);
+  greeting.appendChild(btn);
 }
 
 function loadName() {
