@@ -1,0 +1,10 @@
+.weather {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 400px;
+  height: 200px;
+  font-size: 25px;
+  z-index: 1;
+}

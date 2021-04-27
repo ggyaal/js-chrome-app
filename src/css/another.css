@@ -39,6 +39,11 @@ input {
   display: block;
 }
 
+.show-up {
+  display: block;
+  animation: fadeInUp 1s ease-in-out;
+}
+
 .show-flex {
   display: flex;
   animation: fadeInUp 1s ease-in-out;

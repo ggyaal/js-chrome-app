@@ -3,7 +3,7 @@ const form = document.querySelector(".js-form"),
   greeting = document.querySelector(".js-greetings");
 
 const USER_LS = "currentUser",
-  SHOWING_CN = "showing";
+  SHOWING_CN = "show-flex";
 
 const GREETINGS = [
   "Hi",
