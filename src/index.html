@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
+    <div class="container">
+      <div class="js-clock clock">
+        <div>00:00:00</div>
+      </div>
+      <form class="js-form form">
+        <input type="text" placeholder="What is your name?" />
+      </form>
+      <div class="js-greetings greetings"></div>
+      <form class="js-toDoForm">
+        <input type="text" placeholder="Write a to do" />
+      </form>
+      <ul class="js-toDoList toDoList"></ul>
     </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList"></ul>
     <script src="js/clock.js"></script>
     <script src="js/gretting.js"></script>
     <script src="js/todo.js"></script>

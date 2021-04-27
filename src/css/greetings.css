@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
+
+.greetings {
+  color: var(--white);
+  font-size: 5rem;
+  font-family: "Hi Melody", cursive;
+}
