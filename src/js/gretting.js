@@ -17,6 +17,7 @@ const GREETINGS = [
 function deleteName() {
   if (confirm("Do you want remove name?\nAll toDo lists will be lost")) {
     localStorage.clear();
+    location.reload();
   }
 }
 
@@ -27,8 +28,10 @@ function saveName(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = input.value;
-  paintGreeting(currentValue);
-  saveName(currentValue);
+  if (currentValue.length !== 0) {
+    paintGreeting(currentValue);
+    saveName(currentValue);
+  }
 }
 
 function askForName() {
