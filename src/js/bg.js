@@ -12,7 +12,7 @@ function paintColor(num) {
 
 function paintImg(imgNum) {
   const image = new Image();
-  image.src = `/images/${imgNum}.jpg`;
+  image.src = `images/${imgNum}.jpg`;
   image.classList.add("bgImage");
   body.appendChild(image);
   paintColor(imgNum);
