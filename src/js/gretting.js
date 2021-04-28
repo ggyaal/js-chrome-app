@@ -12,6 +12,7 @@ const GREETINGS = [
   "How are you",
   "fighting,",
   "You can do it,",
+  "Glad to see you again",
 ];
 
 function deleteName() {
