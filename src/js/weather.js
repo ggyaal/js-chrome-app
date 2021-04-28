@@ -45,7 +45,15 @@ function handleGeoSuccess(position) {
 }
 
 function handleGeoError() {
-  console.log("Can't access geo location.");
+  const reset = document.createElement("button");
+  const message = "Can't access geo location.";
+  console.log(message);
+  reset.innerText = "🔄";
+  reset.addEventListener("click", handleReset);
+  loading.classList.remove("loading");
+  weather.innerText = message;
+  weather.appendChild(reset);
+  weather.classList.add("show-up");
 }
 
 function askForCoords() {
