@@ -67,3 +67,8 @@ input:focus::placeholder {
 .white {
   color: var(--black);
 }
+
+.loading::before {
+  content: "";
+  animation: loadingContent 1.5s ease-in-out infinite;
+}

@@ -19,3 +19,24 @@
   color: var(--white);
   font-size: 2rem;
 }
+
+li > span {
+  position: relative;
+}
+
+.all-text {
+  position: absolute;
+  left: 0;
+  background-color: #2d3436;
+  display: inline-block;
+  width: max-content;
+}
+
+ul > .fin span:last-child {
+  color: green;
+  font-weight: 800;
+}
+
+ul > .fin span:last-child:before {
+  content: "✅";
+}

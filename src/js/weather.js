@@ -1,6 +1,13 @@
 const API_KEY = "298ce67c534ec1bc4f2cb6f9ecc8edeb";
 const COORDS = "coords";
 const weather = document.querySelector(".js-weather");
+const loading = document.querySelector(".js-loading");
+
+function handleReset() {
+  loading.classList.add("loading");
+  weather.innerText = "";
+  askForCoords();
+}
 
 function getWeater(lat, lng) {
   fetch(
@@ -10,9 +17,14 @@ function getWeater(lat, lng) {
       return response.json();
     })
     .then(function (json) {
+      const reset = document.createElement("button");
       const temp = json.main.temp;
       const city = json.name;
+      reset.innerText = "🔄";
+      reset.addEventListener("click", handleReset);
+      loading.classList.remove("loading");
       weather.innerText = `${temp}℃ @ ${city}`;
+      weather.appendChild(reset);
       weather.classList.add("show-up");
     });
 }

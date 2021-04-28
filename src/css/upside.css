@@ -10,3 +10,9 @@
   display: none;
   width: max-content;
 }
+
+.weather > button {
+  background: no-repeat;
+  border: none;
+  cursor: pointer;
+}

@@ -17,3 +17,15 @@
     transform: none;
   }
 }
+
+@keyframes loadingContent {
+  0% {
+    content: "LOADING .";
+  }
+  50% {
+    content: "LOADING . .";
+  }
+  100% {
+    content: "LOADING . . .";
+  }
+}
