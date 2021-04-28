@@ -20,10 +20,11 @@ function getWeater(lat, lng) {
       const reset = document.createElement("button");
       const temp = json.main.temp;
       const city = json.name;
+      const weatherAPI = json.weather[0].description;
       reset.innerText = "🔄";
       reset.addEventListener("click", handleReset);
       loading.classList.remove("loading");
-      weather.innerText = `${temp}℃ @ ${city}`;
+      weather.innerText = `${weatherAPI}(${temp}℃) @ ${city}`;
       weather.appendChild(reset);
       weather.classList.add("show-up");
     });
