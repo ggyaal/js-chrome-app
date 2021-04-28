@@ -16,9 +16,6 @@ function paintImg(imgNum) {
   image.classList.add("bgImage");
   body.appendChild(image);
   paintColor(imgNum);
-  setTimeout(function () {
-    container.classList.add("show-flex");
-  }, 2000);
 }
 
 function genRandom() {
@@ -30,5 +27,13 @@ function init() {
   const imgNum = genRandom();
   paintImg(imgNum);
 }
+
+window.onload = function () {
+  const bg = document.querySelector(".bgImage");
+  bg.classList.add("show-bg");
+  setTimeout(function () {
+    container.classList.add("show-flex");
+  }, 2000);
+};
 
 init();
